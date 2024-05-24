@@ -10,7 +10,7 @@ class TouristaController:
         for ponto_turistico in pontos_turisticos:
             if ponto_turistico.nome == ponto:
                 print("=" * 40)
-                print(f"Nome: {ponto_turistico}")
+                print(f"Nome: {ponto_turistico.nome}")
                 print(f"Local: {ponto_turistico.local}")
                 print(f"Descrição: {ponto_turistico.descricao}")
                 print(f"Horário de Funcionamento: {ponto_turistico.horario_funcionamento}")
@@ -25,21 +25,50 @@ class TouristaController:
 
     def main(self):
         while True:
-            MenuView.mostrar_menu()
+            MenuView.menu_principal()
             opcao = MenuView.obter_opcao()
-
             if opcao == "1":
-                ponto = input("Digite o nome do ponto turístico: ")
+                ponto = 'Recife Antigo'
                 self.mostrar_informacoes(ponto)
             elif opcao == "2":
-                nome = input("Digite o nome do novo ponto turístico: ")
-                local = input("Digite o local: ")
-                descricao = input("Digite a descrição: ")
-                horario_funcionamento = input("Digite o horário de funcionamento: ")
-                custo_entrada = input("Digite o custo de entrada: ")
-                self.adicionar_ponto_turistico(nome, local, descricao, horario_funcionamento, custo_entrada)
-            elif opcao == "3":
-                print("Obrigado por usar o Tourista! Volte sempre!")
-                break
+                ponto = 'Alto da Sé'
+                self.mostrar_informacoes(ponto)
+            elif opcao == '3':
+                ponto = 'Cristo Redentor'
+                self.mostrar_informacoes(ponto)
+            elif opcao == '4':
+                ponto = 'Torre Eiffel'
+                self.mostrar_informacoes(ponto)
+            elif opcao == '5':
+                ponto = 'Coliseu'
+                self.mostrar_informacoes(ponto)
+            elif opcao == '6':
+                ponto = 'Palacio de Buckingham'
+                self.mostrar_informacoes(ponto)
+            elif opcao == '7':
+
+                MenuView.mostrar_menuBusca()
+                opcao = MenuView.obter_opcao()
+                if opcao == "1":
+                    ponto = input("Digite o nome do ponto turístico: ").lower()
+                    self.mostrar_informacoes(ponto)
+                elif opcao == "2":
+                    nome = input("Digite o nome do novo ponto turístico: ")
+                    local = input("Digite o local: ")
+                    descricao = input("Digite a descrição: ")
+                    horario_funcionamento = input("Digite o horário de funcionamento: ")
+                    custo_entrada = input("Digite o custo de entrada: ")
+                    self.adicionar_ponto_turistico(nome, local, descricao, horario_funcionamento, custo_entrada)
+            
+                
+                elif opcao == "3":
+                    MenuView.mostrar_menuBusca()
+                elif opcao == "4":
+                    print("Obrigado por usar o Tourista! Volte sempre!")
+                    break
+                else:
+                    print("Opção inválida. Por favor, escolha uma opção válida.")
+            
             else:
-                print("Opção inválida. Por favor, escolha uma opção válida.")
+                print("Digite o que foi solicitado.")
+                continue

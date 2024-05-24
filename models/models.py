@@ -2,7 +2,7 @@ import json
 
 class PontoTuristico:
     def __init__(self, nome, local, descricao, horario_funcionamento, custo_entrada):
-        self.nome = nome
+        self.nome = nome.lower()
         self.local = local
         self.descricao = descricao
         self.horario_funcionamento = horario_funcionamento
