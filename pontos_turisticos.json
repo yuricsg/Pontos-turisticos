@@ -104,6 +104,20 @@
             "descricao": "Ilhas paradisíacas localizadas no meio do oceano Pacifico",
             "horario_funcionamento": "24h",
             "custo_entrada": "20000"
+        },
+        {
+            "nome": "Berlin",
+            "local": "Alemanha",
+            "descricao": "Capital da Alemanha",
+            "horario_funcionamento": "24h",
+            "custo_entrada": "10"
+        },
+        {
+            "nome": "Hong Kong",
+            "local": "China",
+            "descricao": "Bruce lee",
+            "horario_funcionamento": "24h",
+            "custo_entrada": "gratis"
         }
     ]
 }

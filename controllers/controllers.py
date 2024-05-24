@@ -10,7 +10,7 @@ class TouristaController:
         for ponto_turistico in pontos_turisticos:
             if ponto_turistico.nome == ponto:
                 print("=" * 40)
-                print(f"Nome: {ponto_turistico.nome}")
+                print(f"Nome: {ponto_turistico}")
                 print(f"Local: {ponto_turistico.local}")
                 print(f"Descrição: {ponto_turistico.descricao}")
                 print(f"Horário de Funcionamento: {ponto_turistico.horario_funcionamento}")

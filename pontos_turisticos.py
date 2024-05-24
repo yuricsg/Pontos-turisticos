@@ -1,3 +1,8 @@
+import sys
+sys.path.append('models')
+sys.path.append('views')
+sys.path.append('controllers')
+
 from models import PontoTuristicoDAO
 from controllers import TouristaController
 
